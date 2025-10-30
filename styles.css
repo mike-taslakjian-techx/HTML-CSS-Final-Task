@@ -66,3 +66,57 @@ article a {
     color: var(--white);
     cursor: pointer;
 }
+
+.search-section {
+    height: 503px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(720px, 1fr));
+    place-items: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 566px;
+    max-height: 224px;
+}
+
+.search h1 {
+    font-size: 50px;
+    font-weight: 600px;
+    line-height: 100%;
+}
+
+.search-bar {
+    position: relative;
+    width: 541px;
+    height: 70px;
+    align-self: flex-start;
+}
+
+.location-pin {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+    width: 16px;
+    height: 21.33px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    font-size: 18px;
+    padding: 0 40px;
+    border: none;
+    border-color: var(--white);
+    box-shadow: 0 1px 3px #a1a0a0;
+}
+
+.search-icon {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
