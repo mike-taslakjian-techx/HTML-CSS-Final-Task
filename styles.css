@@ -133,7 +133,7 @@ section {
 
 /* Listings Section */
 
-.listings-section {
+.content-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,7 +270,7 @@ section {
     cursor: pointer;
 }
 
-.selection div:hover {
+.selection div:first-of-type {
     background-color: var(--white);
     border: 2px solid var(--primary-green);
 }
