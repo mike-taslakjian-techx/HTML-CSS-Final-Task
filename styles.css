@@ -10,6 +10,7 @@
     --primary-green: #B2D235;
     --red: #FE5D26;
     --light-gray: #F4F4F4;
+    --primary-gray: #808080;
 }
 
 body {
@@ -78,10 +79,12 @@ section {
 }
 
 .search-section {
-    height: 503px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(720px, 1fr));
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .search {
@@ -138,20 +141,24 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    height: 510px;
+    padding: 20px;
 }
 
-.listings-section h2 {
+.listings h3 {
+    font-weight: 600;
+}
+
+h2 {
     font-size: 32px;
 }
 
-.listings {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
 }
 
-.listing-card {
+.card {
     position: relative;
     border-radius: 6px;
 }
@@ -185,7 +192,7 @@ section {
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 158px);
+    grid-template-columns: repeat(2, auto);
     column-gap: 25px;
     row-gap: 15px;
     padding: 15px;
@@ -193,7 +200,7 @@ section {
     margin-bottom: 10px;
 }
 
-.listing-name-and-address p {
+.name-and-address p {
     font-size: 14px;
     font-weight: 400;
     margin-top: 3px;
@@ -206,7 +213,7 @@ section {
 }
 
 .distance p {
-    color: #bebebe;
+    color: var(--primary-gray);
     font-size: 12px;
     opacity: 50%;
 }
@@ -273,4 +280,45 @@ section {
 .selection div:first-of-type {
     background-color: var(--white);
     border: 2px solid var(--primary-green);
+}
+
+/* Events Section */
+
+.events {
+    background-color: #FAFAFA;
+}
+
+.events-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: var(--primary-gray);
+}
+
+.events-nav ul a {
+    cursor: pointer;
+}
+
+.events-nav ul li:first-of-type {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.events .date {
+    position: absolute;
+    right: 15px; 
+    width: 63px;
+    height: 57px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--white);
+    background-color: var(--primary-green);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.events .name-and-address h3{
+    font-weight: 400;
 }
