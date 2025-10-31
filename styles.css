@@ -63,7 +63,7 @@ header div a {
     align-items: center;
 }
 
-.sign-in button {
+.main-button-style {
     height: 100%;
     background-color: var(--primary-green);
     border-radius: 20px;
@@ -312,6 +312,10 @@ h2 {
     box-shadow: 0 1px 5px var(--primary-gray);
 }
 
+.events .card {
+    margin-bottom: 30px;
+}
+
 .events .date {
     position: absolute;
     right: 15px; 
@@ -381,4 +385,39 @@ h2 {
 
 .right {
     right: -16px;
+}
+
+/* Network Search */
+
+.network {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.network-search {
+    display: flex;
+    flex-direction: column;
+    height: 171px;
+    justify-content: space-around;
+    padding: 10px 45px;
+}
+
+.network-search  h2 {
+    letter-spacing: 1px;
+}
+
+.network-search  h2 > span {
+    color: var(--primary-green);
+}
+
+.network-search p {
+    color: var(--primary-gray);
+    width: 75%;
+}
+
+.network-search .main-button-style {
+    height: 40px;
+    border: none;
+    font-size: 16px;
 }
