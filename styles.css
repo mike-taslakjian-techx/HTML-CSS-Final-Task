@@ -593,3 +593,11 @@ header div a {
     font-size: 22px;
     margin-right: 8px;
 }
+
+/* Footer */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
