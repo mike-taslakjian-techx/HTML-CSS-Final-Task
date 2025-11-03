@@ -18,6 +18,89 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+/* Global classes */
+
+.main-button-style {
+    height: 100%;
+    background-color: var(--primary-green);
+    border-radius: 20px;
+    width: 117px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    border-radius: 6px;
+    background-color: var(--white);
+}
+
+.categories {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.categories span {
+    padding: 6px 18px;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: var(--white);
+    margin-left: 5px;
+}
+
+.card > img {
+    border-radius: 6px 6px 0 0;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.green {
+    background-color: var(--primary-green);
+}
+
+.share {
+    background-color: var(--light-gray);
+    border-radius: 40%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px var(--light-gray);
+}
+
+.share:hover {
+    background-color: var(--primary-green);
+}
+
 /* Header */
 
 header {
@@ -63,20 +146,7 @@ header div a {
     align-items: center;
 }
 
-.main-button-style {
-    height: 100%;
-    background-color: var(--primary-green);
-    border-radius: 20px;
-    width: 117px;
-    color: var(--white);
-    cursor: pointer;
-}
-
 /* Search Section */
-
-section {
-    margin-bottom: 20px;
-}
 
 .search-section {
     display: flex;
@@ -134,62 +204,10 @@ section {
     right: 15px;
 }
 
-/* Listings Section */
-
-.content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding: 20px;
-}
+/* Featured Listings Section */
 
 .featured-listings h3 {
     font-weight: 600;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-.cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 28px;
-    position: relative;
-}
-
-.card {
-    position: relative;
-    border-radius: 6px;
-    background-color: var(--white);
-}
-
-.categories {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-}
-
-.categories span {
-    padding: 6px 18px;
-    font-size: 10px;
-    font-weight: 400;
-    border-radius: 5px;
-    color: var(--white);
-    margin-left: 5px;
-}
-
-.card > img {
-    border-radius: 6px 6px 0 0;
-}
-
-.red {
-    background-color: var(--red);
-}
-
-.green {
-    background-color: var(--primary-green);
 }
 
 .info-grid {
@@ -244,22 +262,6 @@ h2 {
 .price > div {
     display: flex;
     gap: 10px;
-}
-
-.share {
-    background-color: var(--light-gray);
-    border-radius: 40%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px var(--light-gray);
-}
-
-.share:hover {
-    background-color: var(--primary-green);
 }
 
 /* .like-share:hover img {
