@@ -543,6 +543,7 @@ header div a {
 .address {
     background-image: url("assets/Subscribe to our newsletter.png");
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 264px;
     background-color: #FAFAFA;
     padding: 20px 15px;
@@ -596,8 +597,33 @@ header div a {
 
 /* Footer */
 
+footer {
+    background-color: #FAFAFA;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
+}
+
+.website-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+    gap: 15px;
+    color: var(--primary-gray)
+}
+
+.footer-info > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
