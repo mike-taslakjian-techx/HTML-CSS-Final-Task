@@ -144,7 +144,7 @@ section {
     padding: 20px;
 }
 
-.listings h3 {
+.featured-listings h3 {
     font-weight: 600;
 }
 
@@ -309,7 +309,7 @@ h2 {
 }
 
 .events .card {
-    box-shadow: 0 1px 5px var(--primary-gray);
+    box-shadow: 0 1px 5px var(--light-gray);
 }
 
 .events .card {
@@ -392,15 +392,16 @@ h2 {
 .network {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 5px 85px;
 }
 
 .network-search {
     display: flex;
     flex-direction: column;
-    height: 171px;
+    gap: 35px;
     justify-content: space-around;
-    padding: 10px 45px;
+    padding: 25px;
 }
 
 .network-search  h2 {
@@ -414,10 +415,29 @@ h2 {
 .network-search p {
     color: var(--primary-gray);
     width: 75%;
+    font-size: 18px;
 }
 
 .network-search .main-button-style {
     height: 40px;
     border: none;
     font-size: 16px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    place-items: center;
+}
+
+.icons article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons article p {
+    font-size: 18px;
 }
