@@ -15,8 +15,8 @@
 
 body {
     height: 100%;
+    width: 100%;
     font-family: Montserrat, sans-serif;
-    overflow-x: hidden;
 }
 
 h2 {
@@ -179,7 +179,7 @@ header div a {
 }
 
 .search h1 {
-    font-size: 50px;
+    font-size: 2rem;
     font-weight: 600px;
     line-height: 100%;
 }
@@ -217,6 +217,10 @@ header div a {
 }
 
 /* Featured Listings Section */
+
+.featured-listings {
+    width: 100%;
+}
 
 .featured-listings h3 {
     font-weight: 600;
@@ -298,6 +302,7 @@ header div a {
 
 .events {
     background-color: #FAFAFA;
+    width: 100%;
 }
 
 .events-nav ul {
@@ -661,13 +666,13 @@ footer {
     color: var(--white);
 }
 
-/* @media (max-width: 1024px) {
-    .cards .card:nth-of-type(3) {
+@media (max-width: 479px){ 
+    .cards .card:nth-of-type(2) {
         display: none;
     }
-} */
+ }
 
-@media (max-width: 838px) {
+@media (max-width: 810px){ 
     .mobile-nav {
         display: block;
     }
@@ -675,12 +680,14 @@ footer {
     header > div {
         display: none;
     }
-}
 
-/* @media (max-width: 575px) {
-    .cards .card:nth-of-type(2),
     .cards .card:nth-of-type(3) {
         display: none;
     }
-}
-*/
+ }
+
+@media (max-width: 991px){ 
+    .cards .card:nth-of-type(4) {
+        display: none;
+    }
+ }
