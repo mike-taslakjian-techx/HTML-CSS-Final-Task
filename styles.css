@@ -487,57 +487,44 @@ header div a {
     position: relative;
 }
 
-/* .listing-info:not(:first-of-type) {
-    position: absolute;
-    z-index: 2;
-    bottom: 30px;
-    left: 32px;
-    color: white;
+.listing-card img {
+    filter: brightness(50%);
+    border-radius: 15px;
 }
 
-.new-york .listing-info {
+.listing-info {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     position: absolute;
-    z-index: 2;
-    bottom: 80px;
-    left: 32px;
-    color: white;
-} */
-
-/* .new-york  .listing-background {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    border-radius: 15px;
-    height: 532px;
-    width: 100%;
-    z-index: 1;
-}
-
-.listing-background:not(:first-of-type) {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    border-radius: 15px;
-    height: 250px;
-    width: 100%;
-    z-index: 1;
-}
-
-.listings-grid img {
-    border-radius: 15px;
+    bottom: 24px;
+    left: 24px;
 }
 
 .city-name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.new-york .listing-info {
+    bottom: 32px;
+    left: 32px;
+}
+
+.new-york .city-name {
     font-size: 32px;
     font-weight: 700;
-} */
+} 
 
-/* .number-of-listings {
+.number-of-listings {
     font-size: 18px;
-    font-weight: 400;
-}
+    font-weight: 300;
+} 
 
 .number-of-listings span {
     color: var(--primary-green);
-} */
+}
 
 /* Address Section */
 
