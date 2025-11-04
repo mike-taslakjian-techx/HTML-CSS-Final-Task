@@ -455,6 +455,7 @@ header div a {
 
 .icons article p {
     font-size: 18px;
+    text-align: center;
 }
 
 /* Featured Listings */
@@ -683,6 +684,10 @@ footer {
 
     .cards .card:nth-of-type(3) {
         display: none;
+    }
+
+    .network {
+        flex-direction: column;
     }
  }
 
