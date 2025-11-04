@@ -23,6 +23,11 @@ h2 {
     font-size: 32px;
 }
 
+img {
+    height: auto;
+    object-fit: cover;
+}
+
 /* Global classes */
 
 .main-button-style {
@@ -167,6 +172,11 @@ header div a {
     gap: 35px;
     flex-wrap: wrap;
     padding: 20px;
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
 }
 
 .search {
@@ -186,7 +196,7 @@ header div a {
 
 .search-bar {
     position: relative;
-    width: 541px;
+    max-width: 541px;
     height: 70px;
     align-self: flex-start;
 }
@@ -200,7 +210,7 @@ header div a {
 }
 
 .search-bar input {
-    width: 100%;
+    min-width: 479px;
     height: 100%;
     border-radius: 35px;
     font-size: 18px;
@@ -213,7 +223,7 @@ header div a {
 .search-icon {
     position: absolute;
     top: 6px;
-    right: 15px;
+    right: 25px;
 }
 
 /* Featured Listings Section */
@@ -507,6 +517,7 @@ header div a {
 .listing-card img {
     filter: brightness(50%);
     border-radius: 15px;
+    width: 100%;
 }
 
 .listing-info {
@@ -548,6 +559,7 @@ header div a {
 .address {
     background-image: url("assets/Subscribe to our newsletter.png");
     background-size: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     height: 264px;
     background-color: #FAFAFA;
@@ -593,6 +605,8 @@ header div a {
     color: var(--white);
     font-size: 22px;
     margin-right: 8px;
+    display: flex;
+    align-items: center;
 }
 
 /* Footer */
@@ -667,32 +681,151 @@ footer {
     color: var(--white);
 }
 
-@media (max-width: 479px){ 
-    .cards .card:nth-of-type(2) {
-        display: none;
-    }
- }
+ @media (max-width: 480px) {
+  .search h1 {
+    font-size: 1.5rem;
+  }
 
-@media (max-width: 810px){ 
-    .mobile-nav {
-        display: block;
-    }
+  .search-bar input {
+    min-width: unset;
+  }
 
-    header > div {
-        display: none;
-    }
+  .search-bar input::placeholder {
+    font-size: 10px;
+  }
 
-    .cards .card:nth-of-type(3) {
-        display: none;
-    }
+  .location-pin {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 12px;
+    height: 16px;
+  }
 
-    .network {
-        flex-direction: column;
-    }
- }
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
 
-@media (max-width: 991px){ 
-    .cards .card:nth-of-type(4) {
-        display: none;
-    }
- }
+  .network-search h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  header > div { 
+    display: none;
+  }
+
+  .cards .card:nth-of-type(2),
+  .cards .card:nth-of-type(3) {
+    display: none;
+  }
+
+  .location-pin {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 12px;
+    height: 16px;
+   }
+
+.search-bar input {
+    height: 100%;
+    border-radius: 35px;
+    font-size: 18px;
+    padding: 0 40px;
+    border: none;
+    border-color: var(--white);
+    box-shadow: 0 1px 3px var(--light-gray);
+}
+
+.search-bar input::placeholder {
+    font-size: 14px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 6px;
+    right: 25px;
+}
+
+  .content-section {
+    padding: 15px;
+  }
+
+  .network-search p {
+    width: 100%;
+  }
+
+  .join-us {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .website-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1028px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards .card:nth-of-type(3),
+  .cards .card:nth-of-type(4) {
+    display: none;
+  }
+
+  .network {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .listings-grid {
+    /* grid-template-columns: 1fr;
+    grid-template-areas: unset;
+    place-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .california,
+  .hawaii,
+  .florida,
+  .alaska,
+  .new-jersey,
+  .georgia {
+    display: none;
+  }
+
+  .address {
+    background-size: cover;
+    text-align: center;
+  }
+}
