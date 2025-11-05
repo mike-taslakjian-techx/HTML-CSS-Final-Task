@@ -1,0 +1,844 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #FFF;
+    --black: #000;
+    --primary-green: #B2D235;
+    --red: #FE5D26;
+    --light-gray: #F4F4F4;
+    --primary-gray: #808080;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+img {
+    height: auto;
+    object-fit: cover;
+}
+
+/* Global classes */
+
+.main-button-style {
+    height: 40px;
+    background-color: var(--primary-green);
+    border-radius: 20px;
+    width: 117px;
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    border-radius: 6px;
+    background-color: var(--white);
+}
+
+.categories {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.categories span {
+    padding: 6px 18px;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: var(--white);
+    margin-left: 5px;
+}
+
+.card > img {
+    border-radius: 6px 6px 0 0;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.green {
+    background-color: var(--primary-green);
+}
+
+.share {
+    background-color: var(--light-gray);
+    border-radius: 40%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px var(--light-gray);
+}
+
+.share:hover {
+    background-color: var(--primary-green);
+}
+
+/* Header */
+
+header {
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    height: 80px;
+    padding: 10px 32px;
+    color: var(--white);
+}
+
+.mobile-nav {
+    width: 24px;
+    height: 16px;
+    display: none;
+}
+
+.mobile-nav div {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    margin-bottom: 5px;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    margin: auto;
+}
+
+header > div {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    width: 385px;
+    justify-content: space-between;
+}
+
+header div a {
+    font-size: 14px;
+    font-weight: 500px;
+    cursor: pointer;
+}
+
+.sign-in {
+    display: flex;
+    gap: 30px;
+    height: 40px;
+    align-items: center;
+}
+
+/* Search Section */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-img {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 566px;
+    max-height: 224px;
+}
+
+.search h1 {
+    font-size: 2rem;
+    font-weight: 600px;
+    line-height: 100%;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 541px;
+    height: 70px;
+    align-self: flex-start;
+}
+
+.location-pin {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+    width: 16px;
+    height: 21.33px;
+}
+
+.search-bar input {
+    min-width: 479px;
+    height: 100%;
+    border-radius: 35px;
+    font-size: 18px;
+    padding: 0 40px;
+    border: none;
+    border-color: var(--white);
+    box-shadow: 0 1px 3px var(--light-gray);
+}
+
+.search-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Featured Listings Section */
+
+.featured-listings {
+    width: 100%;
+}
+
+.featured-listings h3 {
+    font-weight: 600;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 25px;
+    row-gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #bebebe;
+    margin-bottom: 10px;
+}
+
+.name-and-address p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+    color: #cfcece;
+}
+
+.distance {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.distance p {
+    color: var(--primary-gray);
+    font-size: 12px;
+    opacity: 50%;
+}
+
+.distance img {
+    width: 7.5px;
+    height: 10px;
+    margin-top: 2px;
+    margin-right: 3px;
+}
+
+.amenities img {
+    margin-right: 8px;
+}
+
+.price {
+    padding: 0 15px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price p {
+    font-size: 18px;
+}
+
+.price > div {
+    display: flex;
+    gap: 10px;
+}
+
+.selection {
+    display: flex;
+    gap: 10px;
+}
+
+.selection div {
+    background-color: var(--light-gray);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.selection div:first-of-type {
+    background-color: var(--white);
+    border: 2px solid var(--primary-green);
+}
+
+/* Events Section */
+
+.events {
+    background-color: #FAFAFA;
+    width: 100%;
+}
+
+.events-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: var(--primary-gray);
+}
+
+.events-nav ul a {
+    cursor: pointer;
+}
+
+.events-nav ul li:first-of-type {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.events .card {
+    box-shadow: 0 1px 5px var(--light-gray);
+}
+
+.events .card {
+    margin-bottom: 30px;
+}
+
+.events .date {
+    position: absolute;
+    right: 15px; 
+    width: 63px;
+    height: 57px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--primary-green);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.events .name-and-address h3{
+    font-weight: 400;
+}
+
+.events .info-grid {
+    border: none;
+    padding: 10px 15px;
+}
+
+.events .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-self: end;
+}
+
+.events .buttons > div {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.events .buttons > img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.follower-count {
+    font-size: 12px;
+    color: var(--primary-green);
+}
+
+.events .scroll-button {
+    background-color: var(--primary-green);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    top: calc(50% - 16px);
+}
+
+.left {
+    left: -16px;
+}
+
+.right {
+    right: -16px;
+}
+
+/* Network Search */
+
+.network {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 85px;
+}
+
+.network-search {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.network-search  h2 {
+    letter-spacing: 1px;
+}
+
+.network-search  h2 > span {
+    color: var(--primary-green);
+}
+
+.network-search p {
+    color: var(--primary-gray);
+    width: 75%;
+    font-size: 18px;
+}
+
+.network-search .main-button-style {
+    height: 40px;
+    border: none;
+    font-size: 16px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    place-items: center;
+}
+
+.icons article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons article p {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Featured Listings */
+
+.listings {
+    background-color: #FAFAFA;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-areas: 
+        "new-york new-york california florida hawaii"
+        "new-york new-york alaska new-jersey georgia";
+    gap: 25px;
+}
+
+.new-york {
+    grid-area: new-york;
+}
+
+.california {
+    grid-area: california;
+}
+
+.florida {
+    grid-area: florida;
+}
+
+.hawaii {
+    grid-area: hawaii;
+}
+
+.alaska {
+    grid-area: alaska;
+}
+
+.new-jersey {
+    grid-area: new-jersey;
+}
+
+.georgia {
+    grid-area: georgia;
+}
+
+.listing-card {
+    position: relative;
+}
+
+.listing-card img {
+    filter: brightness(50%);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.listing-info {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+}
+
+.city-name {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.new-york .listing-info {
+    bottom: 32px;
+    left: 32px;
+}
+
+.new-york .city-name {
+    font-size: 32px;
+    font-weight: 700;
+} 
+
+.new-york .selection {
+    position: absolute;
+    bottom: 17px;
+    left: 34%;
+}
+
+.new-york .selection div {
+    background-color: var(--white);
+    display: none
+}
+
+.new-york .selection div:first-of-type {
+    background-color: transparent;
+}
+
+.number-of-listings {
+    font-size: 18px;
+    font-weight: 300;
+} 
+
+.number-of-listings span {
+    color: var(--primary-green);
+}
+
+/* Address Section */
+
+.address {
+    background-image: url("assets/Subscribe to our newsletter.png");
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 264px;
+    background-color: #FAFAFA;
+    padding: 20px 15px;
+}
+
+.address .search {
+    margin-top: 25px;
+}
+
+.address .search h1 {
+    font-size: 32px;
+    font-size: 400;
+    margin-bottom: 15px;
+}
+
+/* Join Us Section */
+
+.join-us {
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 73px;
+}
+
+.join-us .main-button-style {
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+}
+
+.join-us div {
+    display: flex;
+    align-items: center;
+}
+
+.join-us div p {
+    color: var(--white);
+    font-size: 22px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer */
+
+footer {
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.website-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 170px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--primary-gray)
+}
+
+.footer-info > a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.footer-info > img {
+    width: 120px;
+    height: 60px;
+}
+
+.footer-info h3 {
+    color: var(--primary-green);
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.newsletter {
+    position: relative;
+    width: 319px;
+}
+
+.newsletter input {
+    border-radius: 35px;
+    padding: 3px 10px;
+    border: none;
+    height: 40px;
+}
+
+.newsletter button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 82px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+ @media (max-width: 480px) {
+  .search h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-bar input {
+    min-width: unset;
+  }
+
+  .search-bar input::placeholder {
+    font-size: 10px;
+  }
+
+  .location-pin {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 12px;
+    height: 16px;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .network-search h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  header > div { 
+    display: none;
+  }
+
+  .cards .card:nth-of-type(2),
+  .cards .card:nth-of-type(3) {
+    display: none;
+  }
+
+  .location-pin {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 12px;
+    height: 16px;
+   }
+
+    .search-bar input {
+        height: 100%;
+        border-radius: 35px;
+        font-size: 18px;
+        padding: 0 40px;
+        border: none;
+        border-color: var(--white);
+        box-shadow: 0 1px 3px var(--light-gray);
+    }
+
+    .search-bar input::placeholder {
+        font-size: 14px;
+    }
+
+  .search-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .content-section {
+    padding: 15px;
+  }
+
+  .network-search p {
+    width: 100%;
+  }
+
+  .join-us {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .website-info {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1028px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards .card:nth-of-type(3),
+  .cards .card:nth-of-type(4) {
+    display: none;
+  }
+
+  .network {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .listings-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .california,
+  .hawaii,
+  .florida,
+  .alaska,
+  .new-jersey,
+  .georgia {
+    display: none;
+  }
+
+  .new-york .selection div {
+    display: block;
+  }
+
+  .address {
+    background-size: cover;
+    text-align: center;
+  }
+}
